@@ -1,0 +1,125 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* font-family: "Noto Sans", serif; */
+    font-family: "Poppins", serif;
+
+}
+
+:root {
+    --DarkBrown: #403D33;
+    --SemiDarkBrown: #AE9E6B;
+    --lightBrown: #CCC18B;
+    --VeryLightBrown: #F2F0E2;
+    --Light: #FFFFFF;
+    --RedBrown: #D95B2E;
+}
+
+body {
+    min-height: 100vh;
+}
+
+h1 {
+    font-family: "Ubuntu", serif;
+    font-weight: 200;
+}
+
+h2 {
+    font-family: "Ubuntu", serif;
+    color: var(--DarkBrown);
+    font-size: 32px;
+    font-weight: 400;
+}
+
+p {
+    font-family: "Poppins", serif;
+}
+
+
+
+/* sale marquee */
+.sale {
+    font-family: "Poppins", serif;
+    background-color: var(--DarkBrown);
+    color: var(--Light);
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+/* header style */
+.navBar {
+    background-color: #fefefe;
+    height: 76px;
+    width: 100%;
+
+
+}
+
+.navIcons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}
+
+nav a {
+    font-family: "Poppins", serif;
+    color: var(--DarkBrown);
+    font-size: 16px;
+    text-decoration: none;
+    opacity: 50%;
+}
+
+nav a:hover {
+    text-decoration: underline var(--RedBrown);
+    color: var(--RedBrown);
+    opacity: 100%;
+
+}
+
+.navIcons img:hover {
+    background-size: cover;
+    filter: saturate(100%) invert(25%) sepia(100%) saturate(400%) hue-rotate(-30deg);
+}
+
+
+
+
+
+/* footer */
+
+footer a {
+    text-decoration: none;
+    color: var(--DarkBrown);
+}
+
+footer a:hover {
+    text-decoration: none;
+    color: var(--RedBrown);
+}
+
+.footerIcons img:hover {
+    background-size: cover;
+    filter: saturate(100%) invert(25%) sepia(100%) saturate(400%) hue-rotate(-30deg);
+}
+
+.subscribeBtn{
+    margin-left: 0;
+    height: 40px; 
+    width: 96px;
+    text-align: center;
+    text-transform: uppercase;
+    border: none;
+    background-color: var(--DarkBrown);
+    color: var(--Light);
+}
+.subscribeBtn:hover{
+    background-color: var(--RedBrown);
+}
