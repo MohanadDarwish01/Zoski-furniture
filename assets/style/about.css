@@ -1,0 +1,343 @@
+body {
+    height: 200vh;
+}
+
+.aboutImg {
+    width: 100%;
+    height: 50vh;
+    overflow: hidden;
+    background: var(--DarkBrown) url(../imgs/about\ us.jpg) no-repeat bottom / cover;
+
+
+}
+
+.designerImg {
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 48px;
+}
+
+.designerImg h3 {
+    font-size: 32px;
+    color: var(--DarkBrown);
+}
+
+.designerImg h5 {
+    font-size: 22px;
+    color: var(--DarkBrown);
+}
+
+.designerImg p {
+    font-size: 18px;
+    color: var(--SemiDarkBrown);
+}
+
+.designerImg>:nth-child(1) {
+    width: 45%;
+    height: 100%;
+    background: var(--DarkBrown) url(../imgs/about\ us2.jpg) no-repeat center / cover;
+}
+
+.designerImg>:nth-child(2) {
+    width: 58%;
+    /* height: 100%; */
+    /* padding: 20px 50px; */
+}
+
+@media screen and (max-width: 426px) {
+    .aboutImg {
+        height: 30vh;
+    }
+
+    .designerImg {
+        flex-direction: column;
+        height: 50%;
+        align-items: center;
+    }
+
+    .designerImg>:nth-child(1) {
+        order: 2;
+        width: 100%;
+
+    }
+
+    .designerImg>:nth-child(2) {
+        order: 1;
+        width: 90%;
+
+    }
+
+    .designerImg h3 {
+        font-size: 24px;
+        color: var(--DarkBrown);
+    }
+
+    .designerImg h5 {
+        font-size: 16px;
+        color: var(--DarkBrown);
+    }
+
+    .designerImg p {
+        font-size: 12px;
+        color: var(--SemiDarkBrown);
+    }
+
+}
+
+@media(max-width: 1023px) and (min-width:768px) {
+    .designerImg h3 {
+        font-size: 28px;
+        color: var(--DarkBrown);
+    }
+
+    .designerImg h5 {
+        font-size: 18px;
+        color: var(--DarkBrown);
+    }
+
+    .designerImg p {
+        font-size: 14px;
+        color: var(--SemiDarkBrown);
+    }
+
+}
+
+
+
+
+
+
+
+/* team */
+/* ====================================================================== */
+
+.userCard {
+    width: 250px;
+    height: 375px;
+    background-color: var(--VeryLightBrown);
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.userImg>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 3;
+}
+
+.sortIcons {
+    position: absolute;
+    bottom: 20px;
+    z-index: 4;
+}
+
+.userInfo {
+    position: absolute;
+    bottom: 10px;
+    z-index: 1;
+    color: var(--DarkBrown);
+}
+
+.userCard:hover>.userInfo>:nth-child(2) {
+    color: var(--RedBrown);
+}
+
+
+
+.userCard:hover .userImg>img {
+
+    transition: transform 0.3s ease-out;
+    filter: brightness(20%);
+    transform: translateY(-80px);
+
+}
+
+
+.social-media {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 60%;
+    padding: 0;
+    width: 150px;
+    z-index: 4;
+
+}
+
+.social-media>li {
+    list-style: none;
+}
+
+.social-media>li>a>img {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 0.3s ease-out;
+}
+
+.userCard:hover>.social-media>li>a>img {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.userCard:hover .social-media li:nth-child(1) a>img {
+    transition-delay: 0s;
+}
+
+.userCard:hover .social-media li:nth-child(2) a>img {
+    transition-delay: 0.1s;
+}
+
+.userCard:hover .social-media li:nth-child(3) a>img {
+    transition-delay: 0.2s;
+}
+
+.userCard:hover .social-media li:nth-child(4) a>img {
+    transition-delay: 0.3s;
+}
+
+.teamSec {
+    width: 90%;
+}
+
+.swiper-pagination-bullet-active>span {
+    background-color: var(--RedBrown);
+}
+
+
+
+
+/* view product */
+/* ============================================================== */
+
+.viewProduct {
+    width: 100%;
+    height: 50vh;
+    padding: 50px 20px;
+    overflow: hidden;
+    background: var(--DarkBrown) url(../imgs/about-3.jpg) no-repeat center / cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.viewProduct>h2 {
+    color: var(--Light);
+    text-align: center;
+    font-weight: 400;
+    font-size: 48px;
+
+}
+
+.viewProduct>p {
+    width: 50%;
+    color: var(--Light);
+    text-align: center;
+    font-weight: 400;
+    font-size: 18px;
+
+}
+
+.content {
+    width: 100%;
+    z-index: 5;
+    color: var(--DarkBrown);
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.animated-button {
+    width: 200px;
+    position: relative;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    border: 2px solid var(--Light);
+    background: transparent;
+    overflow: hidden;
+    z-index: 1;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.animated-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 150%;
+    height: 150%;
+    background: var(--Light);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0.8;
+    z-index: -1;
+    animation: pulse 2s infinite ease-in-out;
+}
+
+.animated-button:hover {
+    border: 2px solid var(--RedBrown);
+    background-color: var(--RedBrown);
+    color: var(--Light);
+}
+
+@keyframes pulse {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1.2);
+        opacity: 0.3;
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0;
+    }
+}
+
+@media(max-width: 1024px) and (min-width:768px) {
+    .viewProduct>h2 {
+        font-size: 40px;
+
+    }
+}
+
+/* @media(max-width: 768px) and (min-width:426px) {
+    .teamSec{
+        justify-content: baseline;
+    }
+} */
+
+@media screen and (max-width:426px) {
+    .animated-button {
+        width: 100%;
+    }
+
+    .viewProduct>h2 {
+        font-size: 24px;
+
+    }
+    .viewProduct>p {
+        font-size: 12px;
+        width: 80%;
+    
+    }
+}

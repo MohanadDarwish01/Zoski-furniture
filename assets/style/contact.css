@@ -1,0 +1,257 @@
+/* view product */
+/* ============================================================== */
+body {
+    height: 200vh;
+    position: relative;
+}
+
+.allContact {
+    height: 820px;
+}
+
+.viewProduct {
+    width: 100%;
+    height: 400px;
+    padding: 70px 20px;
+    position: relative;
+    overflow: hidden;
+    background: var(--DarkBrown) url(../imgs/contact\ us.jpg) no-repeat bottom / cover;
+    background-attachment: fixed;
+    z-index: 2;
+
+}
+
+.viewProduct>h2 {
+    color: var(--Light);
+    text-align: center;
+    font-weight: 400;
+    font-size: 48px;
+
+}
+
+.userForm {
+    /* height: 800px; */
+    width: 90%;
+    padding: 80px 100px;
+    background-color: var(--VeryLightBrown);
+    border-radius: 10px;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    z-index: 3;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.userForm h2 {
+    color: var(--DarkBrown);
+    font-size: 32px;
+    font-weight: 500;
+
+
+}
+
+.userForm h4 {
+    color: var(--DarkBrown);
+    font-size: 18px;
+    font-weight: 500;
+
+
+}
+
+.userForm p {
+    color: var(--SemiDarkBrown);
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+
+
+}
+
+.userForm a {
+    color: var(--DarkBrown);
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: none;
+
+}
+
+.userForm a:hover {
+    color: var(--RedBrown);
+    font-weight: 400;
+
+}
+
+.contactInfo {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+
+.contactForm {
+    width: 60%;
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+}
+
+form>:nth-child(1) {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.formIn {
+    width: 100%;
+    padding: 20px 20px;
+    background-color: var(--VeryLightBrown);
+    border: 2px solid var(--DarkBrown);
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+
+.formIn:focus {
+    border: 2px solid var(--RedBrown);
+}
+
+.animated-button {
+    width: 100%;
+    position: relative;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    border: 2px solid var(--DarkBrown);
+    background: transparent;
+    overflow: hidden;
+    z-index: 1;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    background-color: var(--DarkBrown);
+}
+
+.animated-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 150%;
+    height: 150%;
+    background: var(--Light);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0.8;
+    z-index: -1;
+    animation: pulse 2s infinite ease-in-out;
+}
+
+.animated-button:hover {
+    border: 2px solid var(--RedBrown);
+    background-color: var(--RedBrown);
+    color: var(--Light);
+}
+
+@keyframes pulse {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1.2);
+        opacity: 0.3;
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0;
+    }
+}
+
+
+@media(max-width: 1024px) and (min-width:768px) {
+    .userForm h2 {
+        font-size: 28px;
+    }
+    .userForm {
+        width: 100%;
+        padding: 80px 60px;
+    }
+    .contactInfo {
+        width: 200px;
+    }
+}
+
+@media(max-width: 768px) and (min-width:425px) {
+    .allContact {
+        height: 780px;
+    }
+
+    .userForm h2 {
+        font-size: 24px;
+    }
+
+    .userForm {
+        width: 100%;
+        padding: 50px;
+    }
+
+    .contactInfo {
+        width: 200px;
+    }
+}
+
+@media screen and (max-width:426px) {
+
+    .allContact {
+        height: 1260px;
+    }
+    .viewProduct {
+        height: 350px;
+    }
+
+    .viewProduct>h2 {
+        font-size: 32px;
+    }
+
+    .userForm h2 {
+        font-size: 32px;
+    }
+
+    .userForm {
+        width: 100%;
+        padding: 30px;
+        border-radius: 0;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .contactInfo {
+        width: 100%;
+
+    }
+
+    .contactForm {
+        width: 100%;
+
+    }
+
+    form>:nth-child(1) {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
