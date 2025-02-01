@@ -665,4 +665,7 @@ h3 {
   }
   
   /* Next button */
-  
+  .container{
+    --bs-gutter-x: 0;
+
+  }

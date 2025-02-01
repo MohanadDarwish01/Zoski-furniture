@@ -197,7 +197,7 @@ form {
 
 @media(max-width: 768px) and (min-width:425px) {
     .allContact {
-        height: 780px;
+        height: 1170px;
     }
 
     .userForm h2 {
@@ -205,12 +205,18 @@ form {
     }
 
     .userForm {
+        flex-direction: column;
+        gap: 50px;
         width: 100%;
         padding: 50px;
     }
 
     .contactInfo {
-        width: 200px;
+        width: 100%;
+    }
+
+    .contactForm{
+        width: 100%;
     }
 }
 
